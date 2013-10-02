@@ -1,0 +1,29 @@
+#wrapper2
+  #newsletter.container
+    .title
+      %h2 Projects List
+      %span.byline
+    .content
+      %table.table.table-striped
+        %tr
+          %th Estimate
+          %th Project
+          %th Client
+          %th Description
+          %th Start-Time
+          %th End-Time
+          %th
+          %th
+          %th
+          %tr
+            %td= @project.estimate
+            %td= @project.project
+            %td= @project.client
+            %td= @project.desc
+            %td= @project.start_time
+            %td= @project.due_time
+            %td= link_to 'Delete', user_project_path(current_user.id,@project.id), :method => :delete
+            %td= link_to 'Edit', edit_user_project_path(current_user.id,@project.id)
+            %td= link_to 'Create' ,new_user_project_path(current_user.id)
+      %br/
+

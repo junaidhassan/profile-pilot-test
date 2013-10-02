@@ -1,0 +1,63 @@
+
+- if @project.errors.any?
+  #error_explanation
+    %h2
+      = pluralize(@project.errors.count, "error")
+      prohibited this company from being saved:
+    %ul
+      - @company.errors.full_messages.each do |msg|
+        %li= msg
+
+
+= f.label :estimate
+= select(:project, :estimate, Project::ESTIMATE , {:include_blank => true})
+
+= f.label :client
+= select(:project, :client, Project::CLIENT , {:include_blank => true})
+
+= f.label :desc
+= f.text_field :desc
+
+= f.label :project
+= select(:project, :project, Project::PROJECT , {:include_blank => true})
+
+= f.label :due_time
+= f.date_select(:due_time, order: [:day, :month, :year])
+
+
+= f.label :start_time
+= f.date_select(:start_time,  order: [:day, :month, :year])
+%br
+= f.submit
+
+
+
+-#= form_for(@company) do |f|
+-#  - if @company.errors.any?
+-#    #error_explanation
+-#      %h2
+-#        = pluralize(@company.errors.count, "error")
+-#        prohibited this company from being saved:
+-#      %ul
+-#        - @company.errors.full_messages.each do |msg|
+-#          %li= msg
+-#  .field
+-#  = f.label :name
+-#  %br/
+-#  = f.text_field :name
+-#  .field
+-#  = f.label :description
+-#  %br/
+-#  = f.text_area :description
+-#  .field
+-#  = f.label :logo
+-#  %br/
+-#  = f.text_area :logo
+-#
+-#  -#=collection_select(:user, :user_id, User.all,
+-#  -#                  :id, :id,
+-#  -#                 {:prompt => 'select user for company'})
+-#
+-#  = select_tag("user[user_id]", options_from_collection_for_select(User.find(:all), "id", "name", params[:user]),)
+-#  .actions
+-#  = f.submit

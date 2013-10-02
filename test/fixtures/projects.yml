@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  estimate: 9.99
+  project: MyString
+  start_time: 2013-09-30 21:11:08
+  due_time: 2013-09-30 21:11:08
+  client: MyString
+  desc: MyString
+
+two:
+  estimate: 9.99
+  project: MyString
+  start_time: 2013-09-30 21:11:08
+  due_time: 2013-09-30 21:11:08
+  client: MyString
+  desc: MyString

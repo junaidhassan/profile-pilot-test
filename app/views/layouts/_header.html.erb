@@ -1,0 +1,30 @@
+<!--
+<ul class="nav nav-pills">
+  <li class="active">
+    <a href="#">Dashboard</a>
+  </li>
+  <li><%= link_to 'People' %></li>
+  <li><%= link_to 'Estimates'%></li>
+  <li><%= link_to 'Projects' , user_projects_path(current_user.id)%></li>
+  <li><%= link_to 'Costings'%></li>
+  <li><%= link_to 'Calendar'%></li>
+  <li><%= link_to 'Settings' %></li>
+</ul>-->
+<div id="header-wrapper">
+  <div id="header" class="container">
+    <div id="menu">
+      <ul>
+        <li><%= link_to 'People' %></li>
+        <li><%= link_to 'Estimates'%></li>
+        <li><%= link_to 'Projects' , user_projects_path(current_user.id)%></li>
+        <li><%= link_to 'Costings'%></li>
+        <li><%= link_to 'Calendar'%></li>
+        <li><%= link_to 'Settings' %></li>
+        <li><%= link_to 'SignOut' ,destroy_user_session_path ,:method  => :delete%></li>
+      </ul>
+    </div>
+    <div id="logo">
+      <h1><a href="#">Construction Pioneer</a></h1>
+     </div>
+  </div>
+</div>
